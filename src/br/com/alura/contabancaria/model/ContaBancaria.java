@@ -2,7 +2,7 @@ package br.com.alura.contabancaria.model;
 
 public class ContaBancaria {
     private int mumeroDaConta;
-    private double saldoDaConta;
+    protected double saldoDaConta;
     public String nomeDoTitular;
 
     public int getMumeroDaConta() {
@@ -21,18 +21,32 @@ public class ContaBancaria {
         this.saldoDaConta = saldoDaConta;
     }
 
-    public double recebeValor(double valorRecebido){
-        // System.out.println("Saldo disponível: " + saldoDaConta);
-        return saldoDaConta += valorRecebido;
+    public void consultaSaldo(){
+        System.out.println("Saldo disponível: R$ " + saldoDaConta);
     }
 
-    public double transfereValor(double valorTransferido){
-        if(valorTransferido <= saldoDaConta){
-            // System.out.println("Saldo disponível: R$ " + saldoDaConta);
-            return saldoDaConta -= valorTransferido;
-        }else{
-            // System.out.println("Saldo insuficiente!");
-            return 0;
+    public void depositaValor (double valorDepositado){
+        System.out.println("Valor do depósito: R$ " +valorDepositado);
+        saldoDaConta += valorDepositado;
+    }
+
+    public void sacaValor(double valorSacado){
+        if (valorSacado <= saldoDaConta){
+            System.out.println("Valor do saque: R$ " + valorSacado);
+            saldoDaConta -= valorSacado;
+        }else {
+            System.out.println("Saldo insuficiente!");
         }
+    }
+
+    public double transfereValor(double valorTransferido) {
+        System.out.println("Valor da tranferência: R$ " + valorTransferido);
+        saldoDaConta -= valorTransferido;
+        return valorTransferido;
+    }
+
+    public double recebeValor(double valorRecebido){
+        System.out.println("Valor recebido: R$ " +valorRecebido);
+        return saldoDaConta += valorRecebido;
     }
 }
