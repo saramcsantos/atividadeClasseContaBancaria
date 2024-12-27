@@ -13,6 +13,5 @@ public class ContaCorrente extends ContaBancaria {
 
     public void cobraTarifaMensal(ContaBancaria contaBank){
         contaBank.saldoDaConta -= tarifaMensal;
-        System.out.println("Tarifa Mensal: R$ " + tarifaMensal + " Saldo disponível: R$ " + contaBank.saldoDaConta);
     }
 }

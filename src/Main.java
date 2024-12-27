@@ -17,20 +17,31 @@ public class Main {
         conta.consultaSaldo(); // 1200
 
         System.out.println("---------------------------------");
-        conta.sacaValor(40);
+        double valorSaque = 40;
+        if (conta.getSaldoDaConta() >= valorSaque){
+            conta.sacaValor(valorSaque);
+        }else{
+            System.out.println("Saldo Insuficiente!");
+        }
         conta.consultaSaldo(); // 1160
 
         System.out.println("---------------------------------");
-        double valor = conta.transfereValor(40);
+        double valorTransferencia = 40;
+        if (conta.getSaldoDaConta() >= valorTransferencia){
+            conta.transfereValor(valorTransferencia);
+        }else{
+            System.out.println("Saldo Insuficiente!");
+        }
         conta.consultaSaldo(); // 1120
 
         System.out.println("---------------------------------");
-        conta.recebeValor(valor);
+        conta.recebeValor(valorTransferencia);
         conta.consultaSaldo(); //1160
 
         System.out.println("---------------------------------");
         ContaCorrente contacorrente = new ContaCorrente();
         contacorrente.setTarifaMensal(100);
         contacorrente.cobraTarifaMensal(conta);
+        System.out.println("Tarifa Mensal: R$ " + contacorrente.getTarifaMensal() + " Saldo disponível: R$ " + conta.getSaldoDaConta());
     }
 }
