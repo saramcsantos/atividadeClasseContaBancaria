@@ -159,7 +159,7 @@ Hoje em dia a maioria dos sistemas são desenvolvidos utilizando o paradigma de 
     }
     ```
 - **Herança:** é mais um pilar da POO, nele está o conceito de generalização e especialização. Como dito anteriormente uma classe é um molde de algo do mundo real representado por meio da programação e esse molde servirá para criar objetos que possuem seus atributos e façam usam de seus métodos, contudo esse molde pode servir para outros moldes, por exemplo: classe Mamíferos teria todos os atributos e métodos que pertencem a um mamífero, a partir dessa classe podemos criar a classe Cachorros, classe Gatos e dizer que tanto cachorros quanto gatos possuem atributos e métodos similares os da classe Mamíferos, logo podemos fazer com que Cachorros e Gatos herdem da classe Mamífero. Apesar de herdar não é obrigatório o uso de todos os atributos e métodos da classe herdada, podem até mesmo as novas classes terem seus próprios atributos e métodos. Veja um diagrama de classes:
-![diagrama de classe](image.png)
+![diagrama de classe](https://miro.medium.com/v2/resize:fit:1400/1*KjzvVlg_p_kgSDwQa_jabg.png)
 
 **Nesse diagrama lemos:** Cachorro e Gato tem pelos, mamas, idade e se comunicam. Cachorro e Gato tem rabo. Cachorro se comunica por meio do latido e gato por meio do miado. Logo dizemos que a classe Mamíferos é generalização e as subclasses Cachorro e Gato são especialização.
  
