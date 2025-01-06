@@ -142,7 +142,7 @@ Hoje em dia a maioria dos sistemas são desenvolvidos utilizando o paradigma de 
     // a subclasse pode estar no mesmo pacote ou em outro pacote, o acesso se faz por meio da herança
     public class SubClasse extends SuperClasse{
         public void mostrarNome(){
-            System.out.println(nome)
+            System.out.println(nome);
         }
     }
     ```
